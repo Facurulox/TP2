@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archivos de la Corporación Cápsula</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabecera-principal">
+        <h1 class="logo-empresa">ARCHIVOS C.C.</h1>
+        <nav class="navegacion-principal">
+            <a href="inicio.html">Inicio</a>
+            <a href="catalogoPeliculas.html">Películas</a>
+            <a href="catalogoSpecialTVs.html">Especiales TV</a>
+            <a href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a>
+        </nav>
+    </header>
+
+  <main class="contenedor-principal">
+
+    <article class="post-archivo">
+      <div class="poster-archivo">
+        <img src="Media/bardock.jpg" alt="Poster de Bardock">
+      </div>
+      <div class="info-archivo">
+        <h2>Bardock – El Padre de Goku</h2>
+        <p class="sinopsis">
+          Bardock, un guerrero de clase baja y padre de Goku, recibe una visión profética tras una misión sangrienta: verá la destrucción del planeta Vegeta a manos de Freezer. Aislado por su propia especie y considerado un rebelde, Bardock lucha solo contra su destino y el poder aplastante del emperador galáctico.
+        </p>
+        <div class="panel-datos">
+          <strong>Año:</strong> 1993 <br>
+          <strong>Director:</strong> Shigeyasu Yamauchi
+        </div>
+        <a href="bardock.html" class="boton-analisis">Ver Análisis ></a>
+      </div>
+    </article>
+
+    <article class="post-archivo">
+      <div class="poster-archivo">
+        <img src="Media/trunks1.jpg" alt="GohanyTrunks Poster">
+      </div>
+      <div class="info-archivo">
+        <h2>Un Futuro Diferente – Gohan y Trunks: Los Guerreros del Futuro</h2>
+        <p class="sinopsis">
+          Este especial nos sitúa en una línea temporal devastada por los androides N°17 y N°18. Con Goku muerto y la mayoría de los Guerreros Z exterminados, solo Gohan y un joven Trunks sobreviven en un mundo de ruinas. Sin esperanza ni aliados, el entrenamiento se convierte en resistencia, y la resistencia en sacrificio.
+        </p>
+        <div class="panel-datos">
+          <strong>Año:</strong> 1995 <br>
+          <strong>Director:</strong> Shigeyasu Yamauchi
+        </div>
+        <a href="gohan_trunks.html" class="boton-analisis">Ver Análisis ></a>
+      </div>
+    </article>
+
+  </main>
+
+  <section class="contacto">
+    <h2>Contacto</h2>
+    <p>¿Querés comentarme algo? Escribí tu mensaje acá:</p>
+
+    <form class="formulario-contacto" id="form-contacto" action="mailto:facuvalto03@gmail.com" method="POST" enctype="text/plain">
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="mensaje-enviado" style="display: none; margin-top: 15px; color: #00ffae; font-weight: bold;">
+      ¡Gracias por tu mensaje! Abrí tu cliente de correo para completarlo.
+    </div>
+  </section>
+
+  <footer class="pie-de-pagina">
+    <p>© Corporación Cápsula. Todos los derechos reservados. Este es un archivo no oficial creado por un fan.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const formulario = document.getElementById("form-contacto");
+      const mensaje = document.getElementById("mensaje-enviado");
+
+      formulario.addEventListener("submit", function () {
+        setTimeout(() => {
+          mensaje.style.display = "block";
+        }, 500);
+      });
+    });
+  </script>
+
+</body>
+</html>

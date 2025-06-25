@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivos de la Corporación Cápsula</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabecera-principal">
+        <h1 class="logo-empresa">ARCHIVOS C.C.</h1>
+        <nav class="navegacion-principal">
+            <a href="inicio.html">Inicio</a>
+            <a href="catalogoPeliculas.html">Películas</a>
+            <a href="catalogoSpecialTVs.html">Especiales TV</a>
+            <a href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-principal">
+
+        <article class="post-archivo">
+            <div class="poster-archivo">
+                <img src="Media/broly1.jpg" alt="Poster de Broly - El Super Saiyan Legendario">
+            </div>
+            <div class="info-archivo">
+                <h2>Estalla el duelo: Broly, el Super Saiyan Legendario</h2>
+                <p class="sinopsis">
+                    Un Saiyan de poder incontrolable llamado Broly es descubierto. Su odio por Goku desata una batalla que pone en jaque a todos los Guerreros Z. La primera aparición de un enemigo icónico.
+                </p>
+                <div class="panel-datos">
+                    <strong>Año:</strong> 1993 <br>
+                    <strong>Director:</strong> Shigeyasu Yamauchi
+                </div>
+                <a href="broly.html" class="boton-analisis">Ver Análisis ></a>
+            </div>
+        </article>
+
+        <article class="post-archivo">
+            <div class="poster-archivo">
+                <img src="Media/fusion1.jpg" alt="Poster de Fusión">
+            </div>
+            <div class="info-archivo">
+                <h2>¡Fusión! El renacer de Goku y Vegeta</h2>
+                <p class="sinopsis">
+                    Un error en el Otro Mundo libera a Janemba, un ser que distorsiona la realidad. Forzados a colaborar, Goku y Vegeta deben usar la Danza de la Fusión para crear a Gogeta.
+                </p>
+                <div class="panel-datos">
+                    <strong>Año:</strong> 1995 <br>
+                    <strong>Director:</strong> Shigeyasu Yamauchi
+                </div>
+                <a href="fusion.html" class="boton-analisis">Ver Análisis ></a>
+            </div>
+        </article>
+
+        <article class="post-archivo">
+            <div class="poster-archivo">
+                <img src="Media/Bojack1.webp" alt="Poster de Bojack ha resucitado">
+            </div>
+            <div class="info-archivo">
+                <h2>¡Peligro! Los guerreros invencibles: Bojack ha resucitado</h2>
+                <p class="sinopsis">
+                    Bojack y su pandilla intergaláctica escapan de su prisión dimensional. Durante un torneo de artes marciales, los Guerreros Z deben darlo todo para enfrentar a este nuevo y despiadado enemigo.
+                </p>
+                <div class="panel-datos">
+                    <strong>Año:</strong> 1993 <br>
+                    <strong>Director:</strong> Yoshihiro Ueda
+                </div>
+                <a href="bojack.html" class="boton-analisis">Ver Análisis ></a>
+            </div>
+        </article>
+
+        <article class="post-archivo">
+            <div class="poster-archivo">
+                <img src="Media/turles1.jpg" alt="Poster de Turles">
+            </div>
+            <div class="info-archivo">
+                <h2>¡Devuélvanme a mi Gohan! El Árbol Sagrado del Poder</h2>
+                <p class="sinopsis">
+                    Turles planta un árbol que absorbe la energía vital del planeta para aumentar su poder. Goku y los suyos deben detenerlo antes de que la Tierra sea completamente devastada.
+                </p>
+                <div class="panel-datos">
+                    <strong>Año:</strong> 1990 <br>
+                    <strong>Director:</strong> 	Daisuke Nishio
+                </div>
+                <a href="turles.html" class="boton-analisis">Ver Análisis ></a>
+            </div>
+        </article>
+
+    </main>
+
+  <section class="contacto">
+    <h2>Contacto</h2>
+    <p>¿Querés comentarme algo? Escribí tu mensaje acá:</p>
+
+    <form class="formulario-contacto" id="form-contacto" action="mailto:facuvalto03@gmail.com" method="POST" enctype="text/plain">
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" rows="5" placeholder="Escribí tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="mensaje-enviado" style="display: none; margin-top: 15px; color: #00ffae; font-weight: bold;">
+      ¡Gracias por tu mensaje! Abrí tu cliente de correo para completarlo.
+    </div>
+  </section>
+
+  <footer class="pie-de-pagina">
+    <p>© Corporación Cápsula. Todos los derechos reservados. Este es un archivo no oficial creado por un fan.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const formulario = document.getElementById("form-contacto");
+      const mensaje = document.getElementById("mensaje-enviado");
+
+      formulario.addEventListener("submit", function () {
+        setTimeout(() => {
+          mensaje.style.display = "block";
+        }, 500);
+      });
+    });
+  </script>
+
+</body>
+</html>
